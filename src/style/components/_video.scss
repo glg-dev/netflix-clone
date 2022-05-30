@@ -1,0 +1,16 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+  img {
+    width: 800px;
+    height: 300px;
+    object-fit: cover;
+  }
+  a {
+    text-decoration: underline;
+  }
+}

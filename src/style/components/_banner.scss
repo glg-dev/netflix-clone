@@ -1,0 +1,67 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+  font-size: .9rem;
+  padding-bottom: 3rem;
+  background: #4A4A4A;
+  @media screen and (min-width: 800px) {
+    font-size: 1.2rem;
+    height: 80vh;
+    padding-bottom: 7rem;
+  }
+  &__content {
+    width: 60vw;
+    padding: 8vh 4% 0 4%;
+    @media screen and (min-width: 800px) {
+      padding-top: 30vh;
+    }
+  
+    .banner__title {
+      font-size: 1.5rem;
+    }
+    .banner__buttons {
+      display: flex;
+      .banner__button {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin-right: 0.7rem;
+        padding: 0.4rem 1rem;
+        color: inherit;
+        font-weight: 600;
+        background: rgba(110, 110, 110, 0.7);
+        border-radius: 5px;
+        transition: .3s ease-in-out;
+        @media screen and (min-width: 800px) {
+          font-size: 1.4rem;
+          padding: 0.8rem 1.5rem;
+        }
+        &--play {
+          background: #FFF;
+          color: #000;
+          &:hover {
+            background: rgba($color: #FFF, $alpha: .6);
+          }
+        }
+        &--infos:hover {
+          background: rgba(110, 110, 110, 0.5);
+        }
+      }
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    height: 3rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.5), #141414);
+    @media screen and (min-width: 800px) {
+      height: 7rem;
+    }
+  }
+}

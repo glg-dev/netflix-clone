@@ -1,0 +1,58 @@
+.quickView {
+  position: fixed;
+  z-index: 2;
+  background: #141414;
+  border-radius: 10px;
+  height: calc(100vh - 60px);
+  top: 60px;
+  margin: 0 2%;
+  overflow-y: auto;
+  &__banner {
+    position: relative;
+    padding-top: 20vh;
+    height: 50vh;
+    &::after {
+      content: "";
+      display: block;
+      height: 3rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.5), #141414);
+      @media screen and (min-width: 800px) {
+        height: 7rem;
+      }
+    }
+  }
+  &__content {
+    padding: 3rem;
+    font-size: 1rem;
+  }
+  &__title {
+    font-size: 1.5rem;
+  }
+  .fa-circle-xmark {
+    color: #FFF;
+  }
+  .release {
+    margin-top: 20vh;
+  }
+  .description {
+    font-size: .9rem;
+  }
+  .vote-average {
+    font-size: .9rem;
+    font-weight: bold;
+  }
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 1rem;
+  }
+  @media screen and (min-width: 800px) {
+    width: 50%;
+    left: 25%;
+    right: 25%;
+  }
+}
